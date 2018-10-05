@@ -1,6 +1,21 @@
 require 'json'
-require ''
 
+instructor = []
+columns = [:first, :middle, :last]
+
+instructor_file = File.read "db/instructor.json"
+instructor_data = JSON.parse(instructor_file)
+
+instructor_data.each do |data|
+	first = data['first']
+	middle = data['middle']||= ''
+	last = data['last']
+	instructor << {first: first, middle: middle, last: last}
+end
+
+Instructor.import instructor, columns, validate: true
+
+ 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
