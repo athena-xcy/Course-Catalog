@@ -1,0 +1,18 @@
+#Postgre Database 
+default: &default
+  adapter: postgresql
+  pool: 5 # Specifies the maximum number of connections that can be opened
+  timeout: 5000 # in milliseconds. This is how long the app will wait for a database response
+  encoding: unicode
+
+development:
+  <<: *default # inherits from default
+  database: myapp_development
+
+test:
+  <<: *default
+  database: myapp_test
+
+production:
+  <<: *default
+  database: myapp
