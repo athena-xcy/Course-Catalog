@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Course Catalog</title>
+    <title> <%= full_title(yield(:title)) %> </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +10,7 @@
   </head>
 
   <body>
-     <h1> Course Catalog </h1>
+     <h1 class="text-center display-1"> Course Catalog </h1>
      <%= link_to 'Instructors', instructors_path %>
      <%= link_to 'Courses', courses_path %>
      <%= link_to 'Subjects', subjects_path %>

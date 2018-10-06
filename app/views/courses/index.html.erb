@@ -1,3 +1,5 @@
+<% provide(:title, "Courses") %>
+
 <p id="notice"><%= notice %></p>
 
 <h2>Courses</h2>
@@ -7,8 +9,8 @@
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Code</th>
-      <th scope="col">Description</th>
       <th scope="col">Independent study</th>
+      <th scope="col">Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,8 +20,9 @@
       <tr>
         <td scope="row"><%= course.name %></td>
         <td scope="row"><%= course.code %></td>
-        <td scope="row"><%= course.description %></td>
         <td scope="row"><%= course.independent_study %></td>
+        <td scope="row"><%= course.description %></td>
+        
       </tr>
     <% end %>
   </tbody>

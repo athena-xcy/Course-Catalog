@@ -24,7 +24,7 @@ end
 Instructor.import columns, instructor, validate: true
 
 subject = []
-columns = [:bid, :abbreviation, :name]
+columns = [:bid, :name]
 
 subject_file = File.read("db/subject.json")
 subject_data = JSON.parse(subject_file)
@@ -33,9 +33,8 @@ subject_data.each do |data|
 	
 	if Subject.find_by_bid(data['id']) == nil 
 		bid = data['id']
-		abbreviation = data['abbreviation']
 		sname = data['name']
-		subject << {bid: bid, abbreviation: abbreviation, name: sname}
+		subject << {bid: bid, name: sname}
 	end 
 end
 
