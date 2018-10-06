@@ -1,4 +1,5 @@
 # require 'activerecord-import'
+Instructor.destroy_all
 
 instructor = []
 columns = [:first, :middle, :last, :email, :bid]
@@ -9,12 +10,13 @@ instructor_data = JSON.parse(instructor_file)
 instructor_data.each do |data|
 	
 	if Instructor.find_by_email(data['email']) == nil
+		puts "yes"
 		bid = data['id']
 		tmp = data['first'].split(" ")
 		first = tmp[0]
 		middle = tmp[1..tmp.size].join(" ") 
 		last = data['last']
-		email = data['email']||=''
+		email = data['email']
 		instructor << {first: first, middle: middle, last: last, email: email, bid: bid}
 	end 
 end
