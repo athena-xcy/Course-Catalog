@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.0'
 
 gem 'activerecord-import' 
+gem 'pg'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
@@ -46,7 +47,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '0.18.4'
+#  gem 'pg', '0.18.4'
 end 
 
 group :development do
