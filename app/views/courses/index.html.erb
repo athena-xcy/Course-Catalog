@@ -2,13 +2,13 @@
 
 <h1>Courses</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Code</th>
-      <th>Description</th>
-      <th>Independent study</th>
+      <th scope="col">Name</th>
+      <th scope="col">Code</th>
+      <th scope="col">Description</th>
+      <th scope="col">Independent study</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
   <tbody>
     <% @courses.each do |course| %>
       <tr>
-        <td><%= course.name %></td>
-        <td><%= course.code %></td>
-        <td><%= course.description %></td>
-        <td><%= course.independent_study %></td>
+        <td scope="row"><%= course.name %></td>
+        <td scope="row"><%= course.code %></td>
+        <td scope="row"><%= course.description %></td>
+        <td scope="row"><%= course.independent_study %></td>
        <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>  

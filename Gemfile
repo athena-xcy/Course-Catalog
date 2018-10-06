@@ -5,6 +5,9 @@ ruby '2.5.0'
 
 gem 'activerecord-import' 
 gem 'pg'
+gem 'autoprefixer-rails'
+gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
