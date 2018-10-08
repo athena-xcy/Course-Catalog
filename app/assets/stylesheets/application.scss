@@ -1,6 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+h2 {
+	text-align: center;
+}
+
+.links {
+	text-align: center;
+	font-size:20px;
+
+}
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

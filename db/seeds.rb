@@ -17,6 +17,13 @@ instructor_data.each do |data|
 		middle = tmp[1..tmp.size].join(" ") 
 		last = data['last']
 		email = data['email']
+		# Instructor is an array 
+		# << means push into array 
+		# The same is instructor.push(....)
+		# {first: first, ...}. is a hash map 
+		# {first:first} is equivalent to {:first => first} 
+		# first is a symbol in this case 
+		# access value : instructor[:first], instructor[:last]
 		instructor << {first: first, middle: middle, last: last, email: email, bid: bid}
 	end 
 end
@@ -58,8 +65,6 @@ course_data.each do |data|
 		course << {name:cname, code:code, description:description, independent_study:independent_study}
 	end 
 end
-byebug
+ 
 Course.import columns, course, validate: true 
-byebug
-
-
+ 

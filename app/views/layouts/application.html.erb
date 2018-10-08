@@ -5,15 +5,18 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag('application',{ media: 'all', 'data-turbolinks-track': 'reload'}) %>
+    <%= javascript_include_tag'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
      <h1 class="text-center display-1"> Course Catalog </h1>
+     <div class="links">
+     <%= link_to 'Home', root_path %>
      <%= link_to 'Instructors', instructors_path %>
-     <%= link_to 'Courses', courses_path %>
-     <%= link_to 'Subjects', subjects_path %>
+      <%= link_to 'Courses', courses_path %>  
+       <%= link_to 'Subjects', subjects_path %>  
+   </div>
     <%= yield %>
   </body>
 </html>
