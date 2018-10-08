@@ -12,9 +12,9 @@ For details, see Gemfile
 
 ### Database
 
-development and test database: sqlite3
+development and test: sqlite3
 
-production database: postgre 
+production: postgresql 
 
 ### Run the app
 
