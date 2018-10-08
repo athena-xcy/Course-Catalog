@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Course Catalog Ruby on Rails app that displays all courses, instructors and subjects from Brandeis University. 
 
-Things you may want to cover:
+### Version
 
-* Ruby version
+ruby '2.5.0'
 
-* System dependencies
+rails 5.2.1
 
-* Configuration
+For details, see Gemfile 
 
-* Database creation
+### Database
 
-* Database initialization
+development and test database: sqlite3
 
-* How to run the test suite
+production database: postgre 
 
-* Services (job queues, cache servers, search engines, etc.)
+### Run the app
 
-* Deployment instructions
+To run the app locally:
 
-* ...
+	bundle install 
+
+	rails server 
+
+To run the test locally:
+
+	rails test  
+
+### Links 
+
+[Heorku Link](https://dashboard.heroku.com/apps/course-catalog-app)
+
+[Github Link](https://github.com/athena-xcy/Course-Catalog)
