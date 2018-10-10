@@ -8,15 +8,18 @@
     <%= stylesheet_link_tag('application',{ media: 'all', 'data-turbolinks-track': 'reload'}) %>
     <%= javascript_include_tag'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
 
   <body>
-     <h1 class="text-center display-1"> Course Catalog </h1>
-     <div class="links">
-     <%= link_to 'Home', root_path %>
-     <%= link_to 'Instructors', instructors_path %>
-      <%= link_to 'Courses', courses_path %>  
-       <%= link_to 'Subjects', subjects_path %>  
-   </div>
+     <%= render 'layouts/header' %> 
+  <%= render 'layouts/shim' %>
+ 
+   <div class="container">
     <%= yield %>
+  </div>
   </body>
+  <%= render 'layouts/footer' %>
 </html>
